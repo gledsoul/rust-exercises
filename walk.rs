@@ -11,19 +11,48 @@ pub trait Walk {
 
 struct Human {
 
+       
+
        legs: u32,
+
+}
+
+
+impl Human {
+
+     fn eat() {
+
+
+     }
+
 
 }
 
 struct Lion {
 
+       
+       
        legs: u32,
 
 
 }
 
 
-impl Walk for Lion {
+
+impl Lion {
+
+     fn hunt() {
+
+
+
+     }
+    
+
+
+}
+
+
+impl Walk for Lion  {
 
     fn walk ( &self) -> u32 {
 
@@ -60,11 +89,17 @@ fn main() {
 
      print_walk(&h);
 
+     Human::eat(); 
+
     
 
     let l = Lion { legs : 4 };
 
     print_walk(&l);
+
+    Lion::hunt();
+
+ 
     
 
 }
